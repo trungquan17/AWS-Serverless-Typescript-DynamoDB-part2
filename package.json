@@ -1,0 +1,30 @@
+{
+  "name": "AWS-Serverless-Typescript-DynamoDB-part2",
+  "version": "1.0.0",
+  "description": "Serverless Typescript with AWS Lambda, API Gateway and DynamoDB on offline environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trungquan17/AWS-Serverless-Typescript-DynamoDB-part2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trungquan17/AWS-Serverless-Typescript-DynamoDB-part2/issues"
+  },
+  "homepage": "https://github.com/trungquan17/AWS-Serverless-Typescript-DynamoDB-part2#readme",
+  "dependencies": {
+    "@types/node": "^10.3.6",
+    "aws-sdk": "^2.263.1",
+    "body-parser": "^1.18.3",
+    "class-validator": "^0.8.5",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.1"
+  }
+}
