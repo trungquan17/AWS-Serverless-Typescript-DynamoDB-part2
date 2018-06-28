@@ -5,23 +5,24 @@
     public create thêm mới dữ liệu vào 1 bảng
     public findById tìm một đối trượng trong 1 bảng theo id
  */
-import {DocumentClient} from "aws-sdk/lib/dynamodb/document_client";
+import {DynamoDB} from "aws-sdk";
+// import {DocumentClient} from "aws-sdk/lib/dynamodb/document_client";
 
 class Connection {
-    private dynamoDB: DocumentClient;
+    private dynamoDB: DynamoDB.DocumentClient;
 
     constructor() {
         if(process.env.IS_OFFLINE === 'true') {
-            this.dynamoDB = new DocumentClient({
+            this.dynamoDB = new DynamoDB.DocumentClient({
                 endpoint: process.env.DYNAMODB_ENDPOINT || 'http://localhost:8000',
                 region: 'localhost'
             });
         } else {
-            this.dynamoDB = new DocumentClient();
+            this.dynamoDB = new DynamoDB.DocumentClient();
         }
     }
 
-    public create<T>(params: DocumentClient.PutItemInput): Promise<T> {
+    public create<T>(params: DynamoDB.DocumentClient.PutItemInput): Promise<T> {
         return new Promise<T>((resolve, reject) => {
             this.dynamoDB.put(params, (err,data) => {
                 if(err) {
@@ -32,7 +33,7 @@ class Connection {
         });
     }
 
-    public findById<T>(params: DocumentClient.GetItemInput): Promise<T> {
+    public findById<T>(params: DynamoDB.DocumentClient.GetItemInput): Promise<T> {
         return new Promise<T>((resolve, reject) => {
             this.dynamoDB.get(params, (err, data) => {
                 if(err) {

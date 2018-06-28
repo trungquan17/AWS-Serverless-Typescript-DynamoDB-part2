@@ -42,6 +42,8 @@ class App {
     private mountRoutes(): void {
         const route = Router();
         route.get('/', (req: Request, res: Response, next: NextFunction) => {
+            console.log('123');
+            res.send('adada');
             res.json({
                 message: 'Hello World!',
             });
