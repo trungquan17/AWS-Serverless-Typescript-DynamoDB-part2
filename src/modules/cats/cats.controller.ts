@@ -30,6 +30,7 @@ class CatsController {
     public async create(req: Request, res: Response, next: NextFunction): Promise<void> {
         try {
             const { name, mood } = req.body;
+            console.log(req.body);
             const cat = await CatRepo.create(name, mood);
             res.status(200).json({
                 data: cat,

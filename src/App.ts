@@ -43,7 +43,6 @@ class App {
         const route = Router();
         route.get('/', (req: Request, res: Response, next: NextFunction) => {
             console.log('123');
-            res.send('adada');
             res.json({
                 message: 'Hello World!',
             });
@@ -65,4 +64,5 @@ class App {
     }
 }
 
+// new App().getExpress().listen(3000);
 export default new App().getExpress();

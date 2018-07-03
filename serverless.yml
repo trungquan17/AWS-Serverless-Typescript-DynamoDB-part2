@@ -6,7 +6,7 @@ provider:
 
 plugins:
   - serverless-webpack
-  - serverless-dynamodb-local
+  #- serverless-dynamodb-local
   - serverless-offline
 
 custom:
@@ -50,7 +50,7 @@ resources:
 
 functions:
   app:
-    handler: src/handler.handler
+    handler: handler.handler
     events:
      - http: ANY /
      - http: 'ANY {proxy+}'

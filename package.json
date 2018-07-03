@@ -19,19 +19,19 @@
   "homepage": "https://github.com/trungquan17/AWS-Serverless-Typescript-DynamoDB-part2#readme",
   "dependencies": {
     "@types/node": "^10.3.6",
-    "aws-sdk": "^2.263.1",
+    "aws-sdk": "^2.76.0",
     "body-parser": "^1.18.3",
     "class-validator": "^0.8.5",
-    "dotenv": "^6.0.0",
+    "dotenv": "^4.0.0",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "serverless-dynamodb-local": "^0.2.30",
     "serverless-http": "^1.6.0",
-    "serverless-offline": "^3.25.4",
-    "serverless-webpack": "^5.1.5",
-    "ts-loader": "^4.4.1",
-    "ts-node": "^7.0.0",
-    "typescript": "^2.9.2",
-    "webpack": "^4.12.1"
+    "serverless-offline": "^3.14.2",
+    "serverless-webpack": "^1.0.0-rc.4",
+    "ts-loader": "^2.1.0",
+    "ts-node": "^3.1.0",
+    "typescript": "^2.3.4",
+    "webpack": "^3.0.0"
   }
 }
